@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kavinesh // Communication & Signal Processing Engineer</title>
+  <meta name="description" content="Personal website and research portfolio of Kavinesh - Communication & Signal Processing Engineer specializing in SDR, OFDM, DSP, and Wireless Transceivers.">
+  <meta property="og:title" content="Kavinesh // Communication & Signal Processing Engineer">
+  <meta property="og:description" content="Portfolio, projects, CV, and lab notes for Communication & Signal Processing Engineering.">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600;700&family=Space+Grotesk:wght@600;700&display=swap" rel="stylesheet">
+
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+  <div class="container">
+
+    <!-- Navigation Header -->
+    <header class="site-header">
+      <nav class="nav-bar">
+        <div class="brand-title">
+          KAVINESH <span>// EE</span>
+        </div>
+
+        <ul class="nav-links">
+          <li><button class="nav-btn active" data-target="about">About</button></li>
+          <li><button class="nav-btn" data-target="projects">Projects</button></li>
+          <li><button class="nav-btn" data-target="cv">CV</button></li>
+          <li><button class="nav-btn" data-target="blog">Lab Notes</button></li>
+        </ul>
+
+        <div class="header-right">
+          <button class="theme-btn" id="theme-toggle" title="Toggle Theme" aria-label="Toggle Theme">
+            <!-- Icon populated by JS -->
+          </button>
+        </div>
+      </nav>
+    </header>
+
+    <!-- Main Content Views -->
+    <main>
+
+      <!-- ABOUT SECTION -->
+      <section id="about" class="view-section active-view">
+        
+        <div class="about-grid">
+          
+          <!-- Profile Photo Card -->
+          <div class="profile-card">
+            <div class="profile-img-wrapper">
+              <img src="assets/profile.jpg" alt="Kavinesh" id="profile-img" class="profile-img">
+            </div>
+            <h1 class="profile-name" id="profile-name">Kavinesh</h1>
+            <div class="profile-role" id="profile-role">Communication & Signal Processing Engineer</div>
+            
+            <div class="social-links-row" id="social-links">
+              <!-- Social handle links populated by JS -->
+            </div>
+          </div>
+
+          <!-- Bio & Details Card -->
+          <div class="about-content-card">
+            <div class="section-label">&gt; ABOUT_ME</div>
+            
+            <div style="margin-bottom: 20px;">
+              <span style="font-family:var(--font-mono); font-size:0.78rem; padding:4px 10px; background:rgba(59,130,246,0.12); border:1px solid var(--border-blue); border-radius:var(--radius-full); color:var(--accent-blue);" id="status-badge">
+                📡 Researching 5G/6G OFDM Transceivers
+              </span>
+            </div>
+
+            <div id="about-bio">
+              <!-- Bio lines populated from config.js -->
+            </div>
+
+            <div style="margin-top: 24px;">
+              <div class="section-label" style="margin-bottom:8px;">&gt; KEY_SKILLS</div>
+              <div class="skills-pill-group" id="skills-group">
+                <!-- Skill badges populated from config.js -->
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- FFT Spectrum Analyzer Visualizer Widget -->
+        <div class="spectrum-card">
+          <div class="spectrum-header">
+            <div class="spectrum-title">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 12h3l3-9 4 18 3-9h4"/></svg>
+              REAL-TIME FFT FREQUENCY SPECTRUM ANALYZER
+            </div>
+            <div class="spectrum-controls">
+              <span class="spectrum-slider-label">Carrier Frequency:</span>
+              <input type="range" id="freq-slider" min="0.5" max="4.5" step="0.1" value="2.4" style="accent-color:var(--accent-blue); cursor:pointer;">
+              <span id="freq-val-display" style="font-family:var(--font-mono); font-size:0.8rem; color:var(--accent-blue); min-width:55px;">2.4 GHz</span>
+            </div>
+          </div>
+          <canvas id="spectrum-canvas" class="spectrum-canvas"></canvas>
+        </div>
+
+      </section>
+
+      <!-- PROJECTS SECTION -->
+      <section id="projects" class="view-section">
+        <h2 class="section-title">Engineering Projects & Implementations 📡</h2>
+        <div class="projects-grid" id="projects-grid">
+          <!-- Projects dynamically populated by app.js -->
+        </div>
+      </section>
+
+      <!-- CV / EXPERIENCE SECTION -->
+      <section id="cv" class="view-section">
+        <div class="cv-header">
+          <h2 class="section-title" style="margin-bottom:0;">Curriculum Vitae 📄</h2>
+          <button class="print-btn" id="print-cv-btn">Print / Save PDF</button>
+        </div>
+
+        <div style="margin-top: 24px;">
+          <h3 style="font-family:var(--font-mono); font-size:1.1rem; color:var(--accent-blue); margin-bottom:16px;">&gt; Work & Research History</h3>
+          <div class="timeline" id="experience-timeline">
+            <!-- Timeline items populated by app.js -->
+          </div>
+
+          <h3 style="font-family:var(--font-mono); font-size:1.1rem; color:var(--accent-blue); margin-bottom:16px;">&gt; Education</h3>
+          <div class="timeline" id="education-timeline">
+            <!-- Education items populated by app.js -->
+          </div>
+        </div>
+      </section>
+
+      <!-- LAB NOTES (BLOG) SECTION -->
+      <section id="blog" class="view-section">
+        <h2 class="section-title">Lab Notes & Technical Papers ✍️</h2>
+        <div class="blog-grid" id="blog-grid">
+          <!-- Blog items dynamically populated by app.js -->
+        </div>
+      </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="site-footer">
+      <p>Kavinesh • Communication & Signal Processing Engineer Portfolio • Hostable on GitHub Pages</p>
+    </footer>
+
+  </div>
+
+  <!-- ARTICLE DRAWER MODAL -->
+  <div class="drawer-backdrop" id="drawer-backdrop">
+    <div class="drawer-panel">
+      <button class="drawer-close" id="drawer-close" aria-label="Close article">&times;</button>
+      <h2 id="drawer-title" style="font-size:1.4rem; margin-bottom:12px;">Title</h2>
+      <div id="drawer-body" style="color:var(--text-secondary); line-height:1.8;"></div>
+    </div>
+  </div>
+
+  <!-- App Logic -->
+  <script type="module" src="js/app.js"></script>
+</body>
+</html>
